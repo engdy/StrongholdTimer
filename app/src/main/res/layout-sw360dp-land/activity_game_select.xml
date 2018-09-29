@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+layout-sw360dp-land/activity_game_select.xml
+com.strongholdgames.timer
+
+Created by Andy Foulke on 12/19/2012
+Modified on 9/28/2018
+Copyright (c) 2018 Stronghold Games.  All rights reserved.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:tag="sw360dp"
+    android:id="@+id/layout"
+    android:background="@drawable/background_gradient_selector"
+    tools:context=".GameSelectActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/soundtrack"
+            android:textColor="#FFF"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"/>
+
+        <ToggleButton
+            android:id="@+id/btnSoundtrack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textOff="@string/off"
+            android:textOn="@string/on"
+            android:onClick="clickedSoundtrack"/>
+    </LinearLayout>
+
+    <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:background="@drawable/article27_1"
+                android:contentDescription="@string/article27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="clickedArticle27"/>
+
+            <ImageButton
+                android:background="@drawable/spacecadets_1"
+                android:contentDescription="@string/spacecadets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="clickedSpaceCadets"/>
+
+            <ImageButton
+                android:background="@drawable/timenspace_1"
+                android:contentDescription="@string/timenspace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="clickedSpaceNTime"/>
+
+            <ImageButton
+                android:background="@drawable/ggg_1"
+                android:contentDescription="@string/ggg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="clickedGoingGone"/>
+
+            <ImageButton
+                android:background="@drawable/spacesheep_1"
+                android:contentDescription="@string/spacesheep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="clickedSpaceSheep"/>
+
+            <ImageButton
+                android:background="@drawable/generic_1"
+                android:contentDescription="@string/generictimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:onClick="clickedSimpleTimer"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/txtPromotion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/strongholdurl"
+        android:textColor="#FFF"
+        android:textSize="24sp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"/>
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.strongholdgames.timer">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.Holo">
+        <activity android:name=".SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".GameSelectActivity"
+            android:label="@string/title_activity_game_select"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".GenericTimerActivity"
+            android:label="@string/title_activity_generic_timer"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".TimePickerActivity"
+            android:label="@string/title_activity_time_picker"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".Article27Activity"
+            android:label="@string/title_activity_article27"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".GoingGoingGoneActivity"
+            android:label="@string/title_activity_going_going_gone"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".TimeNSpaceActivity"
+            android:label="@string/title_activity_time_nspace"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".SpaceSheepActivity"
+            android:label="@string/title_activity_space_sheep"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".SpaceCadetsActivity"
+            android:label="@string/title_activity_space_cadets"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".WebActivity"
+            android:label="@string/title_activity_web"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".TutorialActivity"
+            android:label="@string/title_activity_tutorial"
+            android:screenOrientation="landscape"/>
+    </application>
+</manifest>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+bluebutton_gradient.xml
+GameAssistant
+
+Created by Andy Foulke on 12/19/2012
+Last modified on 2/24/2013
+Copyright (c) 2013 Stronghold Games.  All rights reserved.
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <gradient
+                android:angle="90"
+                android:startColor="#FF387CCA"
+                android:endColor="#FF5E9CE2"
+                android:type="linear" />
+        </shape>
+    </item>
+
+</selector>

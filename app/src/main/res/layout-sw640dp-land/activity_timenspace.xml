@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+layout-sw640dp-land/activity_timenspace.xml
+com.strongholdgames.timer
+
+Created by Andy Foulke on 8/5/2013
+Modified on 9/29/2018
+Copyright (c) 2018 Stronghold Games.  All rights reserved.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/green_yellow_gradient"
+    android:keepScreenOn="true"
+    tools:context=".TimeNSpaceActivity"
+    tools:ignore="HardcodedText">
+
+    <ImageView
+        android:id="@+id/imgGame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="160dp"
+        android:contentDescription="@string/timenspace"
+        android:src="@drawable/timenspace_2"/>
+
+    <Button
+        android:id="@+id/btnTimerOne"
+        android:layout_toStartOf="@id/imgGame"
+        android:layout_alignBottom="@id/imgGame"
+        android:onClick="clickedTimer"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="60dp"
+        android:text="@string/start"
+        android:textColor="#FFF"
+        android:background="#527E4c"
+        android:textSize="60sp"/>
+
+    <Button
+        android:id="@+id/btnTimerTwo"
+        android:layout_toEndOf="@id/imgGame"
+        android:layout_alignBottom="@id/imgGame"
+        android:onClick="clickedTimer"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginStart="60dp"
+        android:textColor="#FFF"
+        android:background="#527E4c"
+        android:text="@string/start"
+        android:textSize="60sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnTimerOne"
+        android:layout_alignStart="@id/btnTimerOne"
+        android:textColor="#FFF"
+        android:textSize="40sp"
+        android:text="@string/timerone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnTimerTwo"
+        android:layout_alignStart="@id/btnTimerTwo"
+        android:textColor="#FFF"
+        android:textSize="40sp"
+        android:text="@string/timertwo"/>
+
+    <Button
+        android:id="@+id/btnStartGameClock"
+        android:onClick="clickedStartGameClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:textSize="36sp"
+        android:text="@string/startgameclock"/>
+
+    <Button
+        android:id="@+id/btnStartStop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/txtTimeLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/zerotime"
+        android:textColor="#FFF"
+        android:textSize="120sp"/>
+</RelativeLayout>

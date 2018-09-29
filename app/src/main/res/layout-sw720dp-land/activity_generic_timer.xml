@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+layout-sw720dp-land/activity_generic_timer.xml
+com.strongholdgames.timer
+
+Created by Andy Foulke on 12/19/2012
+Modified on 9/29/2018
+Copyright (c) 2018 Stronghold Games.  All rights reserved.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true"
+    android:background="@drawable/background_gradient_selector"
+    tools:context=".GenericTimerActivity" >
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:contentDescription="@string/strongholdgames"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="80dp"
+        android:src="@drawable/logo_3"/>
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="40dp"
+        android:text="@string/zerotime"
+        android:textColor="#FFF"
+        android:textSize="240sp"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:onClick="clickedStart"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/txtTime"
+        android:layout_below="@id/txtTime"
+        android:textSize="40sp"
+        android:text="@string/start"/>
+
+    <Button
+        android:id="@+id/btnReset"
+        android:onClick="clickedReset"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtTime"
+        android:layout_alignStart="@id/txtTime"
+        android:textSize="40sp"
+        android:text="@string/reset"/>
+
+    <Button
+        android:id="@+id/btnSetTime"
+        android:onClick="clickedSetTime"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/txtTime"
+        android:layout_alignTop="@id/imgLogo"
+        android:textSize="40sp"
+        android:text="@string/settime"/>
+</RelativeLayout>

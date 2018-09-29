@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+layout/start_prompt.xml
+com.strongholdgames.timer
+
+Created by Andy Foulke on 11/20/2014
+Modified on 9/29/2018
+Copyright (c) 2018 Stronghold Games.  All rights reserved.
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ToggleButton
+        android:id="@+id/tbPlayerCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:textOff="@string/playercount34"
+        android:textOn="@string/playercount5"/>
+
+    <TextView
+        android:id="@+id/txtHowMany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/tbPlayerCount"
+        android:layout_alignBaseline="@id/tbPlayerCount"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        android:text="@string/howmanyplayers"/>
+
+    <ToggleButton
+        android:id="@+id/tbScience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/tbPlayerCount"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:textOff="@string/no"
+        android:textOn="@string/yes"/>
+
+    <TextView
+        android:id="@+id/txtWithScience"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/tbScience"
+        android:layout_alignBaseline="@id/tbScience"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:text="@string/withScience"/>
+
+    <TextView
+        android:id="@+id/txtWithScienceExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tbScience"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/withScienceExp"
+        android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    <Button
+        android:id="@+id/btnOK"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtWithScienceExp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/ok"/>
+</RelativeLayout>

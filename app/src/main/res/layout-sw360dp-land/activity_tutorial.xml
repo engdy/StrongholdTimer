@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+layout-sw360dp-land/activity_tutorial.xml
+com.strongholdgames.timer
+
+Created by Andy Foulke on 12/19/2012
+Modified on 9/29/2018
+Copyright (c) 2018 Stronghold Games.  All rights reserved.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TutorialActivity">
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/list"/>
+</LinearLayout>

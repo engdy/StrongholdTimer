@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+layout-sw720dp-land/activity_spacesheep.xml
+com.strongholdgames.timer
+
+Created by Andy Foulke on 1/12/2014
+Last modified on 9/29/2018
+Copyright (c) 2018 Stronghold Games.  All rights reserved.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    android:keepScreenOn="true"
+    tools:context=".SpaceSheepActivity"
+    tools:ignore="HardcodedText">
+
+    <ImageView
+        android:id="@+id/imgStars"
+        android:contentDescription="@string/spacesheep"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/starfield"/>
+
+    <ImageView
+        android:id="@+id/imgSS"
+        android:contentDescription="@string/spacesheep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="100dp"
+        android:src="@drawable/spacesheep_2"/>
+
+    <TextView
+        android:id="@+id/txtClock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/imgSS"
+        android:layout_marginEnd="100dp"
+        android:text="@string/zerotime"
+        android:textColor="#FFF"
+        android:textSize="200sp"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/txtClock"
+        android:layout_below="@id/txtClock"
+        android:onClick="clickedStart"
+        android:text="@string/startgame"/>
+
+    <Button
+        android:id="@+id/btnWolfFreq"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/btnStart"
+        android:layout_below="@id/btnStart"
+        android:onClick="clickedWolfFreq"
+        android:text="@string/wolffreq"/>
+
+    <SeekBar
+        android:id="@+id/sbWolfStrength"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="20dp"
+        android:max="10"
+        android:progress="4"
+        android:progressDrawable="@drawable/progressbar"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:id="@+id/txtWolfStrengthLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sbWolfStrength"
+        android:layout_alignStart="@id/sbWolfStrength"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:text="@string/wolfstrength"/>
+
+    <TextView
+        android:id="@+id/txtWolfStrength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/sbWolfStrength"
+        android:layout_toEndOf="@id/txtWolfStrengthLabel"
+        android:layout_marginStart="5dp"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:text="4"/>
+
+    <Button
+        android:id="@+id/btnAddDefense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="clickedAddDefense"
+        android:text="@string/addcard"/>
+
+    <TextView
+        android:id="@+id/txtDefenseConsoleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnAddDefense"
+        android:layout_alignStart="@id/btnAddDefense"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:text="@string/defenseconsole"/>
+
+    <TextView
+        android:id="@+id/txtDefenseConsole"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/txtDefenseConsoleLabel"
+        android:layout_alignBottom="@id/txtDefenseConsoleLabel"
+        android:layout_toEndOf="@id/txtDefenseConsoleLabel"
+        android:layout_marginStart="5dp"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:text="0"/>
+
+    <Button
+        android:id="@+id/btnPause"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtClock"
+        android:layout_alignEnd="@id/txtClock"
+        android:onClick="clickedPauseResume"
+        android:text="@string/resume"/>
+
+    <Button
+        android:id="@+id/btnDefend"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="100dp"
+        android:onClick="clickedDefend"
+        android:text="@string/defend"/>
+
+    <TextView
+        android:id="@+id/txtPressOnlyIf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnDefend"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:textSize="20sp"
+        android:textColor="#FFF"
+        android:text="@string/pressonlyif"/>
+</RelativeLayout>

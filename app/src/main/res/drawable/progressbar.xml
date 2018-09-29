@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+progressbar.xml
+GameAssistant
+
+Created by Andy Foulke on 1/18/2014
+Copyright (c) 2014 Stronghold Games.  All rights reserved.
+-->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+ 
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle" >
+            <corners android:radius="5dp" />
+ 
+            <gradient
+                android:angle="270"
+                android:endColor="@color/light_gray_header_color"
+                android:startColor="@color/light_gray_header_color" />
+        </shape>
+    </item>
+    <item android:id="@android:id/secondaryProgress">
+        <clip>
+            <shape android:shape="rectangle" >
+                <corners android:radius="5dp" />
+ 
+                <gradient
+                    android:angle="270"
+                    android:endColor="#009"
+                    android:startColor="#00f" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle" >
+                <corners android:radius="5dp" />
+ 
+                <gradient
+                    android:angle="270"
+                    android:endColor="#009"
+                    android:startColor="#00f" />
+            </shape>
+        </clip>
+    </item>
+ 
+</layer-list>

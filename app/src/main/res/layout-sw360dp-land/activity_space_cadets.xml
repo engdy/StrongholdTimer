@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+layout-sw360dp-land/activity_space_cadets.xml
+com.strongholdgames.com
+
+Created by Andy Foulke on 1/25/2013
+Last modified on 9/28/2018
+Copyright (c) 2018 Stronghold Games.  All rights reserved.
+-->
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tag="sw360dp"
+    android:background="#FF232021"
+    android:keepScreenOn="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imgSC"
+        android:contentDescription="@string/spacecadets"
+        android:background="#FFF"
+        android:padding="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="20dp"
+        android:src="@drawable/spacecadets_1"/>
+
+    <ImageView
+        android:id="@+id/imgStep"
+        android:contentDescription="@string/spacecadets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/sc_step_34_0"/>
+
+    <Button
+        android:id="@+id/btnNext"
+        android:onClick="clickedNext"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:text="@string/next"/>
+
+    <Button
+        android:id="@+id/btnPrev"
+        android:onClick="clickedPrev"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@id/btnNext"
+        android:text="@string/previous"/>
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/btnPrev"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/zerotime"
+        android:textColor="#FFF"
+        android:textSize="120sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnViewTutorials"
+        style="?android:attr/buttonStyleSmall"
+        android:onClick="clickedTutorials"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/txtTime"
+        android:layout_alignEnd="@id/txtTime"
+        android:layout_alignTop="@id/txtTime"
+        android:text="@string/viewtutorials"/>
+
+    <TextView
+        android:id="@+id/txtNotTimed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnViewTutorials"
+        android:layout_alignStart="@id/txtTime"
+        android:layout_alignEnd="@id/txtTime"
+        android:text="@string/nottimed"
+        android:textColor="#FFF"
+        android:textSize="32sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:onClick="clickedStart"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/txtTime"
+        android:layout_below="@id/txtTime"
+        android:text="@string/start"/>
+
+    <Button
+        android:id="@+id/btnReset"
+        android:onClick="clickedReset"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnStart"
+        android:layout_toStartOf="@id/btnStart"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/blackbutton_gradient"
+        android:text="@string/reset"/>
+
+    <Button
+        android:id="@+id/btnCommBreak"
+        android:onClick="clickedCommBreak"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btnStart"
+        android:layout_toStartOf="@id/btnReset"
+        android:textSize="12sp"
+        android:text="@string/commbreakdown"/>
+
+    <TextView
+        android:id="@+id/txtNemesisInstruct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnViewTutorials"
+        android:layout_alignStart="@id/txtTime"
+        android:layout_alignEnd="@id/txtTime"
+        android:text="@string/setnemesis"
+        android:textColor="#FFF"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/btnBeginMission"
+        android:onClick="clickedBeginMission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/txtNemesisInstruct"
+        android:layout_below="@id/txtNemesisInstruct"
+        android:text="@string/beginmission"/>
+</RelativeLayout>

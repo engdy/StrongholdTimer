@@ -1,0 +1,104 @@
+<resources>
+    <string name="addcard">Add Defense Card</string>
+    <string name="app_name">Stronghold Games Timer</string>
+    <string name="article27">Article 27</string>
+    <string name="beginmission">Begin Mission</string>
+    <string name="prefs_background">Play background sounds</string>
+    <string name="cancel">Cancel</string>
+    <string name="captain">Captain</string>
+    <string name="comingsoon">Coming soon!</string>
+    <string name="commbreakdown">Comm Breakdown</string>
+    <string name="configuration">Configuration</string>
+    <string name="copyright">Copyright &#169; 2018, Stronghold Games</string>
+    <string name="damagecontrol">Damage Control</string>
+    <string name="defend">Defend</string>
+    <string name="defenseconsole">Defense Console:</string>
+    <string name="dev1">iOS Developer: Atticus Gifford (atticus@bgg)</string>
+    <string name="dev2">Android Developer: Andy Foulke (engdy@bgg)</string>
+    <string name="description">The Stronghold Games Timer app provides countdown timers that can be used specifically for Stronghold Games board games that now or in the future utilize timers. Functionality is also included for a generic countdown timer that can be used for any board game that requires a timer.
+The following games from Stronghold Games use sand timers, and these are or will be directly supported by the Stronghold Games Timer app:
+- Space Cadets
+- Article 27: The UN Security Council Game
+- Time \'n\' Space
+- Space Sheep!
+
+For Space Cadets the app completely replaces the Captain Display, stepping the players through the turn and allowing for tracking of Nemesis.</string>
+    <string name="done">Done</string>
+    <string name="engineering">Engineering</string>
+    <string name="fast">Fast</string>
+    <string name="generictimer">Generic Timer</string>
+    <string name="ggg">Going, Going, Gone!</string>
+    <string name="going">Going</string>
+    <string name="gone">GONE!</string>
+    <string name="helm">Helm</string>
+    <string name="howmanyplayers">How many players?</string>
+    <string name="jumpdrive">Jump Drive</string>
+    <string name="longtimername">30 minutes</string>
+    <string name="medium">Medium</string>
+    <string name="minus">-</string>
+    <string name="next">Next</string>
+    <string name="no">No</string>
+    <string name="nottimed">Not Timed</string>
+    <string name="off">Off</string>
+    <string name="ok">OK</string>
+    <string name="on">On</string>
+    <string name="settings">Settings</string>
+    <string name="pause">Pause</string>
+    <string name="playercount34">3,4</string>
+    <string name="playercount5">5+</string>
+    <string name="plus">+</string>
+    <string name="plus30">+30 sec</string>
+    <string name="pressonlyif">Press only if threat is neutralized!</string>
+    <string name="previous">Previous</string>
+    <string name="random">Random</string>
+    <string name="reset">Reset</string>
+    <string name="resume">Resume</string>
+    <string name="sensors">Sensors</string>
+    <string name="setnemesis">Select the starting point for the Nemesis Marker:</string>
+    <string name="settime">Set Time</string>
+    <string name="shields">Shields</string>
+    <string name="shorttimername">12 minutes</string>
+    <string name="simpletimer">Simple Timer</string>
+    <string name="slow">Slow</string>
+    <string name="soundtrack">SOUNDTRACK</string>
+    <string name="spacecadets">Space Cadets</string>
+    <string name="spacesheep">Space Sheep</string>
+    <string name="start">Start</string>
+    <string name="startgame">Start Game</string>
+    <string name="startgameclock">Start Game Clock</string>
+    <string name="step">Step</string>
+    <string name="stop">Stop</string>
+    <string name="strongholdgames">Stronghold Games</string>
+    <string name="strongholdgameassistant">Stronghold Game Assistant</string>
+    <string name="strongholdurl">strongholdgames.com</string>
+    <string name="threefour">3&#8211;4</string>
+    <string name="timenspace">Time-n-Space</string>
+    <string name="timerone">Timer 1</string>
+    <string name="timertwo">Timer 2</string>
+    <string name="tractorbeams">Tractor Beams</string>
+    <string name="tutorials">Tutorials</string>
+    <string name="fivemore">5+</string>
+    <string name="version">Version 3.2.0</string>
+    <string name="viewtutorials">View Tutorials</string>
+    <string name="withScience">Using SCIENCE* STATION?</string>
+    <string name="withScienceExp">*from the &quot;Resistance is Mostly Futile&quot; expansion</string>
+    <string name="title_activity_time_picker">TimePickerActivity</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_tutorial">TutorialActivity</string>
+    <string name="weapons">Weapons</string>
+    <string name="wolffreq">Wolf Frequency</string>
+    <string name="wolfstrength">Wolf Strength:</string>
+    <string name="yes">Yes</string>
+    <string name="zerotime">00:00</string>
+    <string name="title_activity_timenspace">Time-N-Space</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_web">Stronghold Games Website</string>
+    <string name="title_activity_going_going_gone">GoingGoingGoneActivity</string>
+    <string name="title_activity_space_sheep">SpaceSheepActivity</string>
+    <string name="title_activity_game_select">GameSelectActivity</string>
+    <string name="title_activity_generic_timer">GenericTimerActivity</string>
+    <string name="title_activity_article27">Article27Activity</string>
+    <string name="title_activity_time_nspace">TimeNSpaceActivity</string>
+    <string name="title_activity_space_cadets">SpaceCadetsActivity</string>
+</resources>

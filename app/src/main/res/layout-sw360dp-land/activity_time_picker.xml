@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+layout-sw360dp-land/activity_time_picker.xml
+com.strongholdgames.timer
+
+Created by Andy Foulke on 12/19/2012
+Modified by Andy Foulke on 9/29/2018
+Copyright (c) 2018 Stronghold Games.  All rights reserved.
+-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_gradient_selector"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".TimePickerActivity"
+    tools:ignore="HardcodedText" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnPlusMinute"
+                android:onClick="clickedPlus"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:text="@string/plus"/>
+
+            <EditText
+                android:id="@+id/txtMinute"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:text="05"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/btnMinusMinute"
+                android:onClick="clickedMinus"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:text="@string/minus"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtColon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":"
+            android:textSize="24sp"
+            android:textColor="#FFF"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnPlusSecond"
+                android:onClick="clickedPlus"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:text="@string/plus"/>
+
+            <EditText
+                android:id="@+id/txtSecond"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:text="00"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/btnMinusSecond"
+                android:onClick="clickedMinus"
+                android:layout_width="50sp"
+                android:layout_height="wrap_content"
+                android:text="@string/minus"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnOK"
+            android:onClick="clickedOK"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/ok"/>
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:onClick="clickedCancel"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"/>
+    </LinearLayout>
+</LinearLayout>

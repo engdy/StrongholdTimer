@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+layout-sw640dp-land/activity_article27.xml
+com.strongholdgames.timer
+
+Created by Andy Foulke on 12/19/2012
+Modified on 9/28/2018
+Copyright (c) 2018 Stronghold Games.  All rights reserved.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/darkwood"
+    android:keepScreenOn="true"
+    tools:context=".Article27Activity"
+    tools:ignore="HardcodedText">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/article27"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="160dp"
+        android:src="@drawable/article27_2"/>
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="80dp"
+        android:text="@string/zerotime"
+        android:textColor="#FFF"
+        android:textSize="240sp"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:onClick="clickedStart"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@id/txtTime"
+        android:layout_below="@id/txtTime"
+        android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/blackbutton_gradient"
+        android:textColor="#FFF"
+        android:textSize="24sp"
+        android:text="@string/start"/>
+
+    <Button
+        android:id="@+id/btnReset"
+        android:onClick="clickedReset"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_toStartOf="@id/btnStart"
+        android:layout_below="@id/txtTime"
+        android:layout_margin="5dp"
+        android:background="@drawable/blackbutton_gradient"
+        android:textColor="#FFF"
+        android:textSize="24sp"
+        android:text="@string/reset"/>
+</RelativeLayout>

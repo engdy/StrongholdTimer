@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+orangebutton_gradient.xml
+GameAssistant
+
+Created by Andy Foulke on 2/24/2013
+Last modified on 2/24/2013
+Copyright (c) 2013 Stronghold Games.  All rights reserved.
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <gradient
+                android:angle="90"
+                android:startColor="#FF973516"
+                android:endColor="#FFE25326"
+                android:type="linear" />
+        </shape>
+    </item>
+
+</selector>

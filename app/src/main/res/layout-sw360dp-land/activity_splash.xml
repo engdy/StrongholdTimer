@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+layout-sw360dp-land/activity_splash.xml
+com.strongholdgames.timer
+
+Created by Andy Foulke on 12/19/2012
+Modified on 9/28/2018
+Copyright (c) 2018 Stronghold Games.  All rights reserved.
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF565450"
+    android:id="@+id/layout"
+    android:tag="sw360dp"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:contentDescription="@string/strongholdgameassistant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/logo_2"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@id/imgLogo"
+        android:layout_toEndOf="@id/imgLogo"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="5dp"
+        android:textSize="20sp"
+        android:text="@string/strongholdgameassistant"
+        android:textColor="#FFF"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/textView1"
+        android:layout_alignStart="@id/textView1"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/copyright"
+        android:textColor="#FFF"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@id/textView1"
+        android:layout_below="@id/textView2"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/dev1"
+        android:textColor="#FFF"/>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@id/textView1"
+        android:layout_below="@id/textView3"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/dev2"
+        android:textColor="#FFF"/>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@id/textView1"
+        android:layout_below="@id/textView4"
+        android:layout_marginTop="20dp"
+        android:text="@string/version"
+        android:textColor="#FFF"/>
+</RelativeLayout>
