@@ -1,4 +1,4 @@
-package com.strongholdgames.timer;
+package com.strongholdgames.gameassistant;
 
 import android.content.pm.ActivityInfo;
 import android.media.AudioManager;

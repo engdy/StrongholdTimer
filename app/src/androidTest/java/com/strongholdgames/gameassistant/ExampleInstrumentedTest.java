@@ -1,4 +1,4 @@
-package com.strongholdgames.timer;
+package com.strongholdgames.gameassistant;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.strongholdgames.timer", appContext.getPackageName());
+        assertEquals("com.strongholdgames.gameassistant", appContext.getPackageName());
     }
 }

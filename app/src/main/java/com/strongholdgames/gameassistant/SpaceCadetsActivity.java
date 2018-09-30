@@ -1,4 +1,4 @@
-package com.strongholdgames.timer;
+package com.strongholdgames.gameassistant;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;

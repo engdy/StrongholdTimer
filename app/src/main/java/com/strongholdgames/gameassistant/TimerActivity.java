@@ -1,4 +1,4 @@
-package com.strongholdgames.timer;
+package com.strongholdgames.gameassistant;
 
 import android.app.Activity;
 import android.content.Context;
@@ -217,7 +217,7 @@ public class TimerActivity extends Activity {
     }
 
     protected void playSound(int resId) {
-        Uri uri = Uri.parse("android.resource://com.strongholdgames.timer/" + resId);
+        Uri uri = Uri.parse("android.resource://com.strongholdgames.gameassistant/" + resId);
         playerForeground.reset();
         playerForeground.setLooping(false);
         playerForeground.setOnCompletionListener(null);

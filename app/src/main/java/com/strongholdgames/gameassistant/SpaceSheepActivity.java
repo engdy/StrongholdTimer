@@ -1,4 +1,4 @@
-package com.strongholdgames.timer;
+package com.strongholdgames.gameassistant;
 
 import java.io.IOException;
 import java.util.Random;
@@ -37,9 +37,8 @@ public class SpaceSheepActivity extends Activity implements SeekBar.OnSeekBarCha
     private TextView txtPressOnly;
     private int wolfStrength = 4;
     private int wolfTime = 60;
-    private int lastDieRoll = 0;
     private int shieldStrength = 0;
-    private long durationMillis = 0;
+    private long durationMillis = wolfTime * 1000;
     private long expireMillis = 0;
     private boolean isRunning = false;
     private boolean isPaused = false;
@@ -50,6 +49,7 @@ public class SpaceSheepActivity extends Activity implements SeekBar.OnSeekBarCha
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d(TAG, "onCreate()");
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -75,19 +75,31 @@ public class SpaceSheepActivity extends Activity implements SeekBar.OnSeekBarCha
 
     @Override
     protected void onDestroy() {
+        Log.d(TAG, "onDestroy()");
         handler.removeCallbacks(timerTick);
         super.onDestroy();
     }
 
     @Override
+    protected void onPause() {
+        Log.d(TAG, "onPause()");
+        super.onPause();
+        isPaused = true;
+        handler.removeCallbacks(timerTick);
+        btnPause.setText(R.string.resume);
+    }
+
+    @Override
     protected void onResume() {
+        Log.d(TAG, "onResume()");
         super.onResume();
         sbWolfStrength.setProgress(wolfStrength);
-        txtClock.setText(displayMillis(wolfTime * 1000));
+        txtClock.setText(displayMillis(durationMillis));
         updateDisplay();
     }
 
     public void clickedWolfFreq(View btn) {
+        Log.d(TAG, "clickedWolfFreq()");
         Intent i = new Intent(this, TimePickerActivity.class);
         i.putExtra("seconds", wolfTime);
         startActivityForResult(i, 0);
@@ -95,14 +107,22 @@ public class SpaceSheepActivity extends Activity implements SeekBar.OnSeekBarCha
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent results) {
+        Log.d(TAG, "onActivityResult()");
         super.onActivityResult(requestCode, resultCode, results);
         if (resultCode == RESULT_OK) {
-            wolfTime = results.getIntExtra("seconds", 60);
+            int secs = results.getIntExtra("seconds", 60);
+            if (secs >= 10) {
+                Log.d(TAG, "Setting time to " + secs + " seconds");
+                wolfTime = secs;
+                durationMillis = wolfTime * 1000;
+            }
         }
     }
 
     public void clickedStart(View btn) {
+        Log.d(TAG, "clickedStart()");
         isRunning = true;
+        isPaused = false;
         durationMillis = wolfTime * 1000;
         btnPause.setText(R.string.pause);
         updateDisplay();
@@ -124,6 +144,7 @@ public class SpaceSheepActivity extends Activity implements SeekBar.OnSeekBarCha
                     if (shieldStrength < 0) {
                         shieldStrength = 0;
                     }
+                    Log.d(TAG, "timerTick: expired - numCards = " + numCards + ", shieldStrength = " + shieldStrength);
                     defendAndDiscardCard(numCards);
                     updateDisplay();
                     playSound(R.raw.wolf);
@@ -135,7 +156,8 @@ public class SpaceSheepActivity extends Activity implements SeekBar.OnSeekBarCha
     };
 
     protected void playSound(int resId) {
-        Uri uri = Uri.parse("android.resource://com.strongholdgames.timer/" + resId);
+        Log.d(TAG, "playSound(" + resId + ")");
+        Uri uri = Uri.parse("android.resource://com.strongholdgames.gameassistant/" + resId);
         soundPlayer.reset();
         soundPlayer.setLooping(false);
         soundPlayer.setOnCompletionListener(null);
@@ -151,14 +173,19 @@ public class SpaceSheepActivity extends Activity implements SeekBar.OnSeekBarCha
 
     public void clickedAddDefense(View btn) {
         ++shieldStrength;
+        Log.d(TAG, "clickedAddDefense(): shieldStrength = " + shieldStrength);
         updateDisplay();
     }
 
     public void clickedPauseResume(View btn) {
         isPaused = !isPaused;
+        Log.d(TAG, "clickedPauseResume(): isPaused = " + isPaused);
         if (isPaused) {
             btnPause.setText(R.string.resume);
+            handler.removeCallbacks(timerTick);
         } else {
+            handler.removeCallbacks(timerTick);
+            handler.postDelayed(timerTick, INTERVAL);
             btnPause.setText(R.string.pause);
             expireMillis = SystemClock.elapsedRealtime() + durationMillis;
         }
@@ -166,12 +193,14 @@ public class SpaceSheepActivity extends Activity implements SeekBar.OnSeekBarCha
     }
 
     public void clickedDefend(View btn) {
+        Log.d(TAG, "clickedDefend()");
         defendAndDiscardCard(0);
     }
 
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
         wolfStrength = progress;
+        Log.d(TAG, "onProgressChanged(): wolfStrength = " + wolfStrength);
         String wsText = Integer.toString(wolfStrength);
         txtWolfStrength.setText(wolfStrength == 10 ? "Infinite" : wsText);
         txtClock.setText(displayMillis(wolfTime * 1000));
@@ -220,7 +249,7 @@ public class SpaceSheepActivity extends Activity implements SeekBar.OnSeekBarCha
     }
 
     private void showDieRollMessageWithTitle(String title, String additionalMessage) {
-        lastDieRoll = rand.nextInt(8) + 1;
+        int lastDieRoll = rand.nextInt(8) + 1;
         String message = "Move wolf " + lastDieRoll + " space";
         if (lastDieRoll > 1) {
             message += "s";

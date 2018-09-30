@@ -1,4 +1,4 @@
-package com.strongholdgames.timer;
+package com.strongholdgames.gameassistant;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -35,8 +35,12 @@ public class GenericTimerActivity extends TimerActivity {
         super.onActivityResult(requestCode, resultCode, results);
         if (resultCode == RESULT_OK) {
             int seconds = results.getIntExtra("seconds", 300);
-            Log.d(TAG, "seconds = " + seconds);
-            setDuration(seconds);
+            if (seconds >= 1) {
+                Log.d(TAG, "seconds = " + seconds);
+                setDuration(seconds);
+            } else {
+                Log.d(TAG, "Ignoring seconds <= 0");
+            }
         }
         reset();
     }
